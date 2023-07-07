@@ -1,15 +1,24 @@
 var lista = ['laranja', 'maça', 'pera', 'abacaxi']
 
-var listUl = document.createElement('ul')
+var listaUl = document.createElement('ul');
 
-var body = document.getElementsByTagName('body')
+var body = document.getElementsByTagName('body');
 
-console.log(body[0]);
+//console.log(body[0]);
 
 body[0].appendChild(listaUl);
 
-varlistaNobody = document.getElementsByTagName('ul')
+var listaNoBody = document.getElementsByTagName('ul');
 
-console.log(listaNoBBody[0]);
+console.log(listaNoBody[0]);
 
-for (var i = 0; i < lista.length; i++)
+for (var i = 0; i < lista.length; i++) {
+
+    var liFor = document.createElement('li');
+
+    var textoLi = document.createTextNode(lista[i]);
+
+    liFor.appendChild(textoLi);
+
+    listaNoBody[0].appendChild(liFor);
+}
